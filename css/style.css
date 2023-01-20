@@ -1,0 +1,44 @@
+#header {
+  padding: 5em 2em;
+}
+
+header {
+  background-image: linear-gradient(rgb(153, 153, 240), rgb(255, 252, 249));
+}
+
+/* .c-transparent {
+  background-color: rgb(153, 153, 240);
+} */
+
+.navbar {
+  background-color: rgba(0, 0, 0, 0.395);
+}
+
+#header-photo {
+  max-width: 20em;
+  height: auto;
+  border-radius: 50%;
+}
+
+.lang-icon-container {
+  max-width: 4em;
+  max-height: auto;
+}
+
+@media screen and (min-width: 600px) {
+  .c-large-px {
+    padding: 0rem 3rem;
+  }
+}
+
+@media screen and (min-width: 760px) {
+  .c-large-px {
+    padding: 0rem 6rem;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .c-large-px {
+    padding: 0rem 8rem;
+  }
+}
