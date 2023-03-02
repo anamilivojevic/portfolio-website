@@ -8,225 +8,286 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
       crossorigin="anonymous"
-    />
+      referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500&display=swap"
+      rel="stylesheet" />
+
     <link rel="stylesheet" href="css/style.css" />
 
     <title>Ana Milivojevic website</title>
   </head>
   <body>
-    <!-- navbar -->
     <header>
-      <div class="container-fluid">
-        <nav class="navbar navbar-expand-lg fixed-top p-0">
-          <div class="container justify-content-between py-2">
-            <!-- logo -->
-            <a class="navbar-brand logo-image" href="index.html"
-              ><img src="" alt="logo"
-            /></a>
-
-            <!-- toggle button -->
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbar-collapsable"
-              aria-controls="navbarTogglerDemo02"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <!-- navbar items -->
-            <div class="collapse navbar-collapse" id="navbar-collapsable">
-              <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                  <a class="nav-link page-scroll" href="#header">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link page-scroll" href="#about">About</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link page-scroll" href="#services">Services</a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a
-                    class="nav-link dropdown-toggle"
-                    href="#"
-                    id="dropdown01"
-                    data-toggle="dropdown"
-                    aria-haspopup="true"
-                    aria-expanded="false"
-                    >Drop</a
-                  >
-                  <div class="dropdown-menu" aria-labelledby="dropdown01">
-                    <a class="dropdown-item page-scroll" href="project.html"
-                      >Project Details</a
-                    >
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item page-scroll" href="terms.html"
-                      >Terms Conditions</a
-                    >
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item page-scroll" href="privacy.html"
-                      >Privacy Policy</a
-                    >
-                  </div>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link page-scroll" href="#contact">Contact</a>
-                </li>
-              </ul>
-              <!-- <span class="nav-item social-icons">
-                <span class="fa-stack">
-                  <a href="#https://www.linkedin.com/in/ana-milivojevic">
-                    <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-facebook-f fa-stack-1x"></i>
-                  </a>
-                </span>
-                <span class="fa-stack">
-                  <a href="#https://twitter.com/anamil96">
-                    <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-twitter fa-stack-1x"></i>
-                  </a>
-                </span>
-              </span> -->
-            </div>
-            <!-- end of navbar-collapse -->
-          </div>
-
-          <!-- end of container -->
-        </nav>
-      </div>
-      <!-- end of navbar -->
-
-      <div class="container-fluid" id="header">
+      <div class="container-fluid" id="header-div">
         <div
-          class="container d-flex align-items-center justify-content-around flex-wrap-reverse"
-        >
-          <div class="pe-3">
-            <h1>Hi, I'm Ana Milivojevic</h1>
-            <h4>A web developer.</h4>
+          class="container d-flex align-items-center justify-content-around flex-wrap-reverse">
+          <div class="pe-3 text-center text-md-start">
+            <h1>
+              Hi &ndash; I'm&nbsp;
+              <span style="font-weight: bolder" id="ananame"
+                >Ana Milivojevi&cacute;</span
+              >,
+            </h1>
+            <h4>a web developer.</h4>
           </div>
           <img
             class="mb-4 mb-lg-0"
             src="images/header-photo.jpg"
             alt="Photo of me."
-            id="header-photo"
-          />
+            id="header-photo" />
         </div>
       </div>
     </header>
     <main>
-      <div class="container">
-        <section id="about-me" class="mt-4">
-          <div class="container c-large-px mb-5 text-center">
-            <p>
-              I am a beginner web developer with a passion for creating visually
-              appealing and functional websites. I am eager to gain more
-              experience and continue to improve my skills to provide the best
-              user experience.
+      <!-- "About me" section -->
+      <section id="about-me" class="mt-2 mb-5">
+        <div class="container d-flex justify-content-center">
+          <div class="col-12 col-md-8 text-center">
+            <p class="mb-0">
+              Passionate about creating visually appealing and functional
+              websites.
             </p>
+            <p>Constantly learning and excited to turn my ideas into code.</p>
           </div>
-        </section>
-        <section id="languages">
-          <div class="container my-5 text-center px-lg-5">
-            <div class="row justify-content-around px-lg-5 mx-md-3 mx-lg-5">
-              <div class="col-3 col-sm-1">
-                <img
-                  class="lang-icon-container"
-                  src="./images/lang-html.png"
-                  alt="Icon HTML"
-                />
+        </div>
+      </section>
+      <!-- End of "About me" section -->
+      <!-- "Languages" section -->
+      <div class="stripes"></div>
+      <section id="languages" class="mb-5 py-4">
+        <div class="container text-center px-lg-5">
+          <div
+            class="row justify-content-center gap-0 gap-sm-3 gap-md-4 px-lg-5">
+            <div class="lang-icon-container col-3 col-sm-1 p-0">
+              <img src="./images/html-color.png" alt="Icon HTML" />
+            </div>
+
+            <div class="lang-icon-container col-3 col-sm-1 p-0">
+              <img src="./images/css-color.png" alt="Icon CSS" />
+            </div>
+
+            <div class="lang-icon-container col-3 col-sm-1 p-0">
+              <img src="./images/js-color.png" alt="Icon JS" />
+            </div>
+
+            <div class="lang-icon-container col-3 col-sm-1 p-0">
+              <img src="./images/react-color.png" alt="Icon React" />
+            </div>
+
+            <div class="lang-icon-container col-3 col-sm-1 p-0">
+              <img src="./images/java-color.png" alt="Icon Java" />
+            </div>
+
+            <div class="lang-icon-container col-3 col-sm-1 p-0">
+              <img src="./images/spring-color.png" alt="Icon Spring Boot" />
+            </div>
+
+            <div class="lang-icon-container col-3 col-sm-1 p-0">
+              <img src="./images/mysql-color.png" alt="Icon MySQL" />
+            </div>
+
+            <div class="lang-icon-container col-3 col-sm-1 p-0">
+              <img src="./images/python-color.png" alt="Icon Python" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="stripes"></div>
+      <!-- End of "Languages" section  -->
+      <!-- "Projects" section -->
+      <section id="projects" class="mb-5 large-mt">
+        <h2 class="text-center mb-0">My Projects</h2>
+        <div class="d-flex justify-content-center">
+          <div class="stripe mb-4"></div>
+        </div>
+        <div class="container px-4 px-xl-5 text-center">
+          <div class="project-cards">
+            <div class="row row-cols-1 row-cols-md-3 g-4 align-items-stretch">
+              <div class="col mb-3">
+                <div class="card h-100">
+                  <div class="card-img-link">
+                    <img
+                      src="./images/project-dog-breeds.png"
+                      class="card-img-top"
+                      alt="Dog Breeds project image" />
+                    <div class="dark-overlay"></div>
+                    <div class="overlay-text">
+                      <a
+                        target="_blank"
+                        href="https://github.com/anamilivojevic/dog-breeds"
+                        class="btn-project-link hover-purple"
+                        >See on GitHub</a
+                      >
+                    </div>
+                  </div>
+                  <div
+                    class="card-body px-3 px-sm-5 px-md-3 mt-2 d-flex flex-column justify-content-between">
+                    <div>
+                      <h4 class="card-title">Dog Breeds</h4>
+                      <p class="font-small">
+                        Catalogue of dog breeds. Uses a MySQL database, a back
+                        end in Java with Spring, and a front end with React.
+                      </p>
+                    </div>
+                    <div
+                      class="project-icon-container d-flex justify-content-center gap-2">
+                      <img src="./images/react-black.png" />
+                      <img src="./images/spring-black.png" />
+                      <img src="./images/mysql-black.png" />
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="col-3 col-sm-1">
-                <img
-                  class="lang-icon-container"
-                  src="./images/lang-css.png"
-                  alt="Icon CSS"
-                />
+
+              <div class="col mb-3">
+                <div class="card h-100">
+                  <div class="card-img-link">
+                    <img
+                      src="./images/project-tic-tac-toe.png"
+                      class="card-img-top"
+                      alt="Tic-tac-toe project image" />
+                    <div class="dark-overlay"></div>
+                    <div class="overlay-text">
+                      <a
+                        target="_blank"
+                        href="https://github.com/anamilivojevic/tic-tac-toe"
+                        class="btn-project-link hover-purple"
+                        >See on GitHub</a
+                      >
+                    </div>
+                  </div>
+                  <div
+                    class="card-body px-3 px-sm-5 px-md-3 mt-2 d-flex flex-column justify-content-between">
+                    <div>
+                      <h4 class="card-title">Tic-Tac-Toe</h4>
+                      <p class="font-small">
+                        Interactive website for playing tic-tac-toe. Developed
+                        in vanilla JavaScript, through DOM manipulation.
+                      </p>
+                    </div>
+                    <div
+                      class="project-icon-container d-flex justify-content-center gap-2">
+                      <img src="./images/js-black.png" />
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="col-3 col-sm-1">
-                <img
-                  class="lang-icon-container"
-                  src="./images/lang-bootstrap.png"
-                  alt="Icon Bootstrap"
-                />
-              </div>
-              <div class="col-3 col-sm-1">
-                <img
-                  class="lang-icon-container"
-                  src="./images/lang-js.png"
-                  alt="Icon JS"
-                />
-              </div>
-              <div class="col-3 col-sm-1">
-                <img
-                  class="lang-icon-container"
-                  src="./images/lang-java.png"
-                  alt="Icon Java"
-                />
-              </div>
-              <div class="col-3 col-sm-1">
-                <img
-                  class="lang-icon-container"
-                  src="./images/lang-spring.png"
-                  alt="Icon Spring Boot"
-                />
-              </div>
-              <div class="col-3 col-sm-1">
-                <img
-                  class="lang-icon-container"
-                  src="./images/lang-mysql.png"
-                  alt="Icon MySQL"
-                />
-              </div>
-              <div class="col-3 col-sm-1">
-                <img
-                  class="lang-icon-container"
-                  src="./images/lang-python.png"
-                  alt="Icon Python"
-                />
+
+              <div class="col mb-0 mb-md-3">
+                <div class="card h-100">
+                  <div class="card-img-link">
+                    <img
+                      src="./images/project-outdoor-activities.png"
+                      class="card-img-top"
+                      alt="Outdoor activities project image" />
+                    <div class="dark-overlay"></div>
+                    <div class="overlay-text">
+                      <a
+                        target="_blank"
+                        href="https://github.com/anamilivojevic/outdoor-adventures"
+                        class="btn-project-link hover-purple"
+                        >See on GitHub</a
+                      >
+                    </div>
+                  </div>
+                  <div
+                    class="card-body px-3 px-sm-5 px-md-3 mt-2 d-flex flex-column justify-content-between">
+                    <div>
+                      <h4 class="card-title">Outdoor Activities</h4>
+                      <p class="font-small">
+                        Single-page application for finding recreational outdoor
+                        adventures, styled in CSS and Bootstrap.
+                      </p>
+                    </div>
+                    <div
+                      class="project-icon-container d-flex justify-content-center gap-2">
+                      <img src="./images/html-black.png" />
+                      <img src="./images/css-black.png" />
+
+                      <!-- <img src="./images/react-black.png" />
+                        <img src="./images/spring-black.png" />
+                        <img src="./images/mysql-black.png" /> -->
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </section>
-        <!-- <section id="experience">
-          <div class="container my-5 text-center">
-            <h2>Experience</h2>
-            <p></p>
-          </div>
-        </section> -->
-        <section id="projects">
-          <div class="container my-5 text-center">
-            <h2>My Projects</h2>
-          </div>
-        </section>
-        <section id="contacts">
-          <div class="container my-5 text-center">
-            <h2>Contacts</h2>
-            <p>Phone blabla</p>
-            <p>Email: mail@anamilivojevic.com</p>
-            <a href="https://www.linkedin.com/in/ana-milivojevic"
-              ><p>LinkedIn</p></a
-            >
-          </div>
-        </section>
-      </div>
+        </div>
+      </section>
+      <!-- End of "Projects" section  -->
     </main>
 
     <footer>
-      <div
-        class="container-fluid d-flex justify-content-center align-content-center bg-secondary bg-opacity-10"
-      >
-        <p class="small text-muted my-4">&copy; Ana Milivojevic</p>
+      <div id="footer-bg" class="container-fluid d-flex align-items-end">
+        <div
+          class="container-fluid d-flex justify-content-center align-content-center">
+          <div class="text-center" style="color: white">
+            <p class="hover-grey mb-1">
+              <i class="fa-solid fa-envelope"></i
+              ><a href="mailto:mail@anamilivojevic.com"
+                >mail@anamilivojevic.com</a
+              >
+            </p>
+            <p class="hover-grey mb-4">
+              <i class="fa-brands fa-linkedin"></i
+              ><a
+                style="font-size: 83%"
+                href="https://www.linkedin.com/in/ana-milivojevic"
+                target="_blank"
+                >linkedin.com/in/ana-milivojevic</a
+              >
+            </p>
+          </div>
+        </div>
       </div>
     </footer>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-      crossorigin="anonymous"
-    ></script>
+      crossorigin="anonymous"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        var curr = "Ана Миливоjевић";
+        const to = "Ana Milivojević";
+        const elem = document.getElementById("ananame");
+
+        // Create an array of '[0..(from.length)]', then shuffle it.
+        const indices = Array.from(Array(curr.length).keys()).sort(
+          (a, b) => 0.5 - Math.random()
+        );
+
+        // Initial state of the text (cyrillic script).
+        elem.innerText = curr;
+
+        // Number of iterations that have been done.
+        var iterations = 0;
+        var spacing = 0;
+
+        // For each index 'i' in the randomly shuffled array...
+        for (const i of indices) {
+          // Function to replace 'curr[i]' with 'to[i]'.
+          const replaceChar = () => {
+            curr = curr.substring(0, i) + to[i] + curr.substring(i + 1);
+            elem.innerText = curr;
+            elem.style.letterSpacing = `${spacing}rem`;
+            spacing += 0.015;
+          };
+
+          // Add a delay for a visual effect.
+          setTimeout(replaceChar, 750 + 85 * iterations++);
+        }
+      });
+    </script>
   </body>
 </html>
