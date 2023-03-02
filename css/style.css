@@ -23,8 +23,17 @@ body {
 /***********************************/
 /* header section */
 
-#header-div {
-  padding: 5em 2em;
+#header-container {
+  padding: 4rem 1rem;
+}
+
+.header-flex-container {
+  display: flex;
+  align-items: center;
+}
+
+#header-photo-wrapper {
+  margin-left: auto;
 }
 
 header {
@@ -39,6 +48,8 @@ header {
   max-width: 15em;
   height: auto;
   border-radius: 50%;
+  -webkit-box-shadow: 4px 4px 7px -1px rgba(0, 0, 0, 0.1);
+  box-shadow: 4px 4px 7px -1px rgba(0, 0, 0, 0.1);
 }
 
 /***********************************/
@@ -70,10 +81,18 @@ header {
 
 .lang-icon-container img {
   max-width: 3.5em;
+
+  -webkit-filter: drop-shadow(1.2px 1.2px 1.2px #22222231);
+  filter: drop-shadow(1.2px 1.2px 1.2px #22222231);
 }
 
 /***********************************/
 /* projects section */
+
+.card {
+  -webkit-box-shadow: 4px 4px 7px -1px rgba(0, 0, 0, 0.1);
+  box-shadow: 4px 4px 7px -1px rgba(0, 0, 0, 0.1);
+}
 
 .card-img-link {
   position: relative;
@@ -138,7 +157,7 @@ header {
 .project-icon-container img {
   max-width: 1.5em;
   filter: invert(53%) sepia(49%) saturate(555%) hue-rotate(202deg)
-    brightness(110%) contrast(98%);
+    brightness(110%) contrast(98%) drop-shadow(1px 1px 1px #2222221f);
 }
 
 /***********************************/
@@ -182,20 +201,59 @@ footer a:hover {
 /***********************************/
 /* media queries */
 
-@media screen and (min-width: 600px) {
-  .c-large-px {
-    padding: 0rem 3rem;
+@media screen and (max-width: 590px) {
+  .header-flex-container {
+    justify-content: space-around;
+    flex-wrap: wrap-reverse;
+  }
+
+  #header-photo-wrapper {
+    margin-left: 0;
+  }
+
+  .c-text-center {
+    text-align: center;
   }
 }
 
-@media screen and (min-width: 760px) {
-  .c-large-px {
-    padding: 0rem 6rem;
+@media screen and (min-width: 590px) {
+  #header-container {
+    padding: 5rem 3rem;
   }
 }
 
-@media screen and (min-width: 1000px) {
-  .c-large-px {
-    padding: 0rem 8rem;
+@media screen and (min-width: 674px) {
+  #header-container {
+    padding: 5rem 6rem;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  #header-container {
+    padding: 5rem 8rem;
+  }
+}
+
+@media screen and (min-width: 985px) {
+  #header-container {
+    padding: 5rem 6rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  #header-container {
+    padding: 5rem 12rem;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  #header-container {
+    padding: 5rem 15rem;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  #header-container {
+    padding: 5rem 20rem;
   }
 }

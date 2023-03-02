@@ -27,10 +27,9 @@
   </head>
   <body>
     <header>
-      <div class="container-fluid" id="header-div">
-        <div
-          class="container d-flex align-items-center justify-content-around flex-wrap-reverse">
-          <div class="pe-3 text-center text-md-start">
+      <div id="header-container">
+        <div class="p-0 header-flex-container">
+          <div class="pe-3 c-text-center">
             <h1>
               Hi &ndash; I'm&nbsp;
               <span style="font-weight: bolder" id="ananame"
@@ -39,11 +38,13 @@
             </h1>
             <h4>a web developer.</h4>
           </div>
-          <img
-            class="mb-4 mb-lg-0"
-            src="images/header-photo.jpg"
-            alt="Photo of me."
-            id="header-photo" />
+          <div id="header-photo-wrapper">
+            <img
+              class="mb-4 mb-lg-0"
+              src="images/header-photo.jpg"
+              alt="Photo of me."
+              id="header-photo" />
+          </div>
         </div>
       </div>
     </header>
@@ -51,12 +52,12 @@
       <!-- "About me" section -->
       <section id="about-me" class="mt-2 mb-5">
         <div class="container d-flex justify-content-center">
-          <div class="col-12 col-md-8 text-center">
+          <div class="col-10 col-lg-6 col-md-10 text-center">
             <p class="mb-0">
               Passionate about creating visually appealing and functional
-              websites.
+              websites. Constantly learning and excited to turn my ideas into
+              code.
             </p>
-            <p>Constantly learning and excited to turn my ideas into code.</p>
           </div>
         </div>
       </section>
@@ -122,13 +123,14 @@
                         target="_blank"
                         href="https://github.com/anamilivojevic/dog-breeds"
                         class="btn-project-link hover-purple"
-                        >See on GitHub</a
+                        ><i class="fa-brands fa-github"></i
+                        >&nbsp;&nbsp;GitHub</a
                       >
                     </div>
                   </div>
                   <div
                     class="card-body px-3 px-sm-5 px-md-3 mt-2 d-flex flex-column justify-content-between">
-                    <div>
+                    <div class="mb-2">
                       <h4 class="card-title">Dog Breeds</h4>
                       <p class="font-small">
                         Catalogue of dog breeds. Uses a MySQL database, a back
@@ -158,13 +160,14 @@
                         target="_blank"
                         href="https://github.com/anamilivojevic/tic-tac-toe"
                         class="btn-project-link hover-purple"
-                        >See on GitHub</a
+                        ><i class="fa-brands fa-github"></i
+                        >&nbsp;&nbsp;GitHub</a
                       >
                     </div>
                   </div>
                   <div
                     class="card-body px-3 px-sm-5 px-md-3 mt-2 d-flex flex-column justify-content-between">
-                    <div>
+                    <div class="mb-2">
                       <h4 class="card-title">Tic-Tac-Toe</h4>
                       <p class="font-small">
                         Interactive website for playing tic-tac-toe. Developed
@@ -192,13 +195,14 @@
                         target="_blank"
                         href="https://github.com/anamilivojevic/outdoor-adventures"
                         class="btn-project-link hover-purple"
-                        >See on GitHub</a
+                        ><i class="fa-brands fa-github"></i
+                        >&nbsp;&nbsp;GitHub</a
                       >
                     </div>
                   </div>
                   <div
                     class="card-body px-3 px-sm-5 px-md-3 mt-2 d-flex flex-column justify-content-between">
-                    <div>
+                    <div class="mb-2">
                       <h4 class="card-title">Outdoor Activities</h4>
                       <p class="font-small">
                         Single-page application for finding recreational outdoor
@@ -259,7 +263,7 @@
         const to = "Ana Milivojević";
         const elem = document.getElementById("ananame");
 
-        // Create an array of '[0..(from.length)]', then shuffle it.
+        // Creating an array of '[0..(from.length)]', then shuffling it.
         const indices = Array.from(Array(curr.length).keys()).sort(
           (a, b) => 0.5 - Math.random()
         );
@@ -267,11 +271,9 @@
         // Initial state of the text (cyrillic script).
         elem.innerText = curr;
 
-        // Number of iterations that have been done.
         var iterations = 0;
         var spacing = 0;
 
-        // For each index 'i' in the randomly shuffled array...
         for (const i of indices) {
           // Function to replace 'curr[i]' with 'to[i]'.
           const replaceChar = () => {
@@ -281,7 +283,7 @@
             spacing += 0.015;
           };
 
-          // Add a delay for a visual effect.
+          // Adding a delay for a visual effect.
           setTimeout(replaceChar, 750 + 85 * iterations++);
         }
       });
