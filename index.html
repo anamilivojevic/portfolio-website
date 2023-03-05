@@ -29,14 +29,15 @@
     <header>
       <div id="header-container">
         <div class="p-0 header-flex-container">
-          <div class="pe-3 c-text-center">
+          <div class="c-text-center">
             <h1>
-              Hi &ndash; I'm&nbsp;
-              <span style="font-weight: bolder" id="ananame"
-                >Ana Milivojevi&cacute;</span
-              >,
+              <span>Hi &ndash; I'm</span>
+              <span class="name-container">
+                <span id="name-container-cyrillic"></span>
+                <span id="name-container-latin"></span>
+              </span>
             </h1>
-            <h4>a web developer.</h4>
+            <h4 id="name-container-webdev">a web developer.</h4>
           </div>
           <div id="header-photo-wrapper">
             <img
@@ -203,10 +204,10 @@
                   <div
                     class="card-body px-3 px-sm-5 px-md-3 mt-2 d-flex flex-column justify-content-between">
                     <div class="mb-2">
-                      <h4 class="card-title">Outdoor Activities</h4>
+                      <h4 class="card-title">Outdoor Adventures</h4>
                       <p class="font-small">
                         Single-page application for finding recreational outdoor
-                        adventures, styled in CSS and Bootstrap.
+                        activities, styled in CSS and Bootstrap.
                       </p>
                     </div>
                     <div
@@ -256,37 +257,6 @@
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
       crossorigin="anonymous"></script>
-
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        var curr = "Ана Миливоjевић";
-        const to = "Ana Milivojević";
-        const elem = document.getElementById("ananame");
-
-        // Creating an array of '[0..(from.length)]', then shuffling it.
-        const indices = Array.from(Array(curr.length).keys()).sort(
-          (a, b) => 0.5 - Math.random()
-        );
-
-        // Initial state of the text (cyrillic script).
-        elem.innerText = curr;
-
-        var iterations = 0;
-        var spacing = 0;
-
-        for (const i of indices) {
-          // Function to replace 'curr[i]' with 'to[i]'.
-          const replaceChar = () => {
-            curr = curr.substring(0, i) + to[i] + curr.substring(i + 1);
-            elem.innerText = curr;
-            elem.style.letterSpacing = `${spacing}rem`;
-            spacing += 0.015;
-          };
-
-          // Adding a delay for a visual effect.
-          setTimeout(replaceChar, 750 + 85 * iterations++);
-        }
-      });
-    </script>
+    <script src="./script.js"></script>
   </body>
 </html>
